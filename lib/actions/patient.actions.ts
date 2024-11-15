@@ -65,7 +65,7 @@ export const registerPatient = async ({
     if (identificationDocument) {
       const inputFile =
         identificationDocument &&
-        //@ts-expect-error
+        //@ts-ignore
         InputFile.fromBlob(
           identificationDocument?.get("blobFile") as Blob,
           identificationDocument?.get("fileName") as string
